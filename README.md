@@ -1,2 +1,1 @@
-# acms
-Repository for my University degree project
+# AUTOMATED CLEARANCE MANAGEMENT SYSTEM FOR UNIVERSITY OF NIGERIA NSUKKA
