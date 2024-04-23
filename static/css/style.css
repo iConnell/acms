@@ -1,0 +1,209 @@
+/* index */
+
+/* Header styles */
+header {
+    overflow: hidden;
+    background-color: green;
+    color: #ffffff;
+    padding: 1rem 0; /* Top and bottom padding */
+    margin: 0; /* Remove default margin */
+    width: 100%; 
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Landing section styles */
+.landing {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Button styles */
+.home-btn {
+    background-color: green;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: 0.5rem;
+    cursor: pointer;
+    font-size: 1.9rem;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Features section styles */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+    background-color: green;
+    margin-left: 1.5rem;
+    color: white;
+}
+
+.feature-text {
+    font-size: large;
+}
+
+/* Footer styles */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+
+/* Login */
+
+/* Login Container */
+.login-content {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px auto;
+}
+
+/* Login Header */
+.login-content h1 {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.5em;
+}
+
+/* Input Fields */
+.login-content input[type="text"],
+.login-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Login Button */
+.login-content button {
+    background-color: #008f36;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-content button:hover {
+    background-color: #007a31;
+}
+
+/* Forgot Password Link */
+.login-content a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    text-decoration: none;
+}
+
+.login-content a:hover {
+    text-decoration: underline;
+}
+
+/* Sign up */
+
+/* Sign-up Container */
+.signup-content {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px auto;
+}
+
+/* Sign-up Header */
+.signup-content h1 {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.5em;
+}
+
+/* Input Fields */
+.signup-content input[type="text"],
+.signup-content input[type="email"],
+.signup-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Sign-up Button */
+.signup-content button {
+    background-color: #008f36;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.signup-content button:hover {
+    background-color: #007a31;
+}
+
+/* Sign-in Link */
+.signup-content a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    text-decoration: none;
+}
+
+.signup-content a:hover {
+    text-decoration: underline;
+}
+
+/* Error message style */
+.errorlist {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <section class="landing">
+        <div class="landing-content">
+            <h1>Welcome to UNN Clearance Management System</h1>
+            <p><i>Streamlining the clearance process for students and staff</i></p>
+            <a href="{% url 'user_auth:student_login' %}" class="home-btn">Get Started</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Easy Clearance Process</h2>
+            <p class="feature-text">Submit your clearance requests with just a few clicks</p>
+        </div>
+        <div class="feature">
+            <h2>Track Progress</h2>
+            <p class="feature-text">Monitor the status of your clearance requests in real-time</p>
+        </div>
+        <div class="feature">
+            <h2>Efficient Workflow</h2>
+            <p class="feature-text">Automated approval process ensures faster clearance</p>
+        </div>
+    </section>
+    
+{% endblock %}

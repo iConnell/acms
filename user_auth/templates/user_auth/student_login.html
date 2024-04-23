@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - UNN Clearance Management System{% endblock %}
+
+{% block content %}
+<section class="login">
+    <div class="login-content">
+        <h1>Student Login</h1>
+        <form action="{% url 'user_auth:student_login' %}" method="post">
+            {% csrf_token %}
+            <label for="matric_number">Matric Number:</label>
+            <input type="text" name="matric_number" placeholder="Enter Matric Number" required class="input-field">
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Enter Password" required class="input-field">
+            <button type="submit" class="btn">Login</button>
+        </form>
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        <p><a href="#" class="forgot-password">Forgot your password?</a></p>
+        <p><a href="{% url 'user_auth:student_register' %}" class="new-student">Don't have an account? Sign up</a></p>
+
+        <p><a href="{% url 'user_auth:staff_login' %}" class="staff-login">Login as Staff</a></p>
+    </div>
+</section>
+{% endblock %}
