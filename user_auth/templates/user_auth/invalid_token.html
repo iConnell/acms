@@ -1,0 +1,15 @@
+<!-- invalid_token.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Invalid Token{% endblock %}
+
+{% block content %}
+    <div class="invalid-token-container">
+        <h2>Invalid Token</h2>
+        <p>The password reset link is invalid or has expired.</p>
+        <p>Please request a new password reset link.</p>
+
+        <p><a href="{% url 'user_auth:student_login' %}" class="back-to-login">Back to Login</a></p>
+    </div>
+{% endblock %}

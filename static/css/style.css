@@ -207,3 +207,256 @@ footer {
     font-size: 14px;
     margin-top: 10px;
 }
+
+
+/* Forgot Password Container */
+.forgot-password-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px auto;
+}
+
+/* Forgot Password Header */
+.forgot-password-container h1 {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.5em;
+}
+
+/* Input Fields */
+.forgot-password-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Reset Password Button */
+.forgot-password-container button {
+    background-color: #008f36;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.forgot-password-container button:hover {
+    background-color: #007a31;
+}
+
+/* Forgot Password Link */
+.forgot-password-container a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    text-decoration: none;
+}
+
+.forgot-password-container a:hover {
+    text-decoration: underline;
+}
+
+/* Create new password */
+
+/* Create New Password Container */
+.create-new-password-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px auto;
+}
+
+/* Create New Password Header */
+.create-new-password-container h2 {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.5em;
+}
+
+/* Input Fields */
+.create-new-password-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Set New Password Button */
+.create-new-password-container button {
+    background-color: #008f36;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.create-new-password-container button:hover {
+    background-color: #007a31;
+}
+
+/* Back to Login Link */
+.create-new-password-container a.back-to-login {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    text-decoration: none;
+}
+
+.create-new-password-container a.back-to-login:hover {
+    text-decoration: underline;
+}
+
+
+/* Invalid Token Container */
+.invalid-token-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px auto;
+}
+
+/* Invalid Token Header */
+.invalid-token-container h2 {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.5em;
+}
+
+/* Error Message */
+.invalid-token-container p {
+    text-align: center;
+    margin-top: 10px;
+    color: red;
+}
+/* Back to Login Link */
+.invalid-token-container a.back-to-login {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    text-decoration: none;
+}
+
+.invalid-token-container a.back-to-login:hover {
+    text-decoration: underline;
+}
+
+
+/* Password Reset Link Sent */
+
+/* Password Reset Link Sent Container */
+.password-reset-link-sent-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px auto;
+}
+
+/* Password Reset Link Sent Header */
+.password-reset-link-sent-container h2 {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.5em;
+}
+
+/* Message Text */
+.password-reset-link-sent-container p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Back to Login Link */
+.password-reset-link-sent-container a.back-to-login {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    text-decoration: none;
+}
+
+.password-reset-link-sent-container a.back-to-login:hover {
+    text-decoration: underline;
+}
+
+/* password_reset_done.css */
+
+/* Password Reset Done Container */
+.password-reset-done-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px auto;
+}
+
+/* Password Reset Done Header */
+.password-reset-done-container h2 {
+    background-color: #008f36;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.5em;
+}
+
+/* Text Content */
+.password-reset-done-container p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Back to Login Link */
+.password-reset-done-container a.back-to-login {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    text-decoration: none;
+}
+
+.password-reset-done-container a.back-to-login:hover {
+    text-decoration: underline;
+}

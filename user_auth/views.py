@@ -1,7 +1,13 @@
+from django.contrib.auth.forms import SetPasswordForm
+from django.contrib.auth.tokens import default_token_generator
+from django.contrib.auth import get_user_model
+from django.utils.http import urlsafe_base64_decode
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, get_user_model
 from .models import Student, Staff
 from .forms import UserRegistrationForm, StudentCreationForm
+from django.contrib.auth.tokens import PasswordResetTokenGenerator
+from utils.tokens import generate_token, decode_token
 
 User = get_user_model()
 # Create your views here.
@@ -89,3 +95,48 @@ def staff_login(request):
             return render(request, 'user_auth/staff_login.html', context)
     else:
         return render(request, 'user_auth/staff_login.html')
+
+def forgot_password(request):
+    email = request.POST.get('email')
+    if request.method == 'POST':
+
+        try:
+            user = User.objects.get(email=email)
+
+            token = generate_token(email)
+            print(token)
+
+            # send password reset email
+            user.send_email("Forgot Password", f"Seems you forgot your password click this link to reset your password {token}")
+            return render(request, 'user_auth/password_reset_link_sent.html')
+        except:
+            return render(request, 'user_auth/password_reset_link_sent.html')
+
+    return render(request, 'user_auth/forgot_password.html')
+
+def reset_password(request, token):
+        email = decode_token(token)
+        if email:
+            user = User.objects.get(email=email)
+            if request.method == 'POST':
+                form = SetPasswordForm(user, request.POST)
+                if form.is_valid():
+                    form.save()
+                    
+                    return render(request, 'user_auth/password_reset_done.html')
+                else: 
+                    return render(request, 'user_auth/reset_password.html', {'form': form, 'error_message': form.errors})
+            else:
+                form = SetPasswordForm(user)
+            return render(request, 'user_auth/reset_password.html', {'form': form})
+        else:
+            # Invalid token
+            return render(request, 'user_auth/invalid_token.html')
+
+
+
+
+
+
+
+
