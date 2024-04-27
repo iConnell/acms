@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Perform Clearance - UNN Clearance Management System{% endblock %}
+
+{% block content %}
+<section class="perform-clearance">
+    <div class="perform-clearance-content">
+        <h1>{{heading}}</h1>
+        <p class="message">{{ message }}</p>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+            <button type="submit" class="btn" {% if form.disabled %}disabled{% endif %}> Submit Documents</button>
+        </form>
+        {% if error_message %}
+            <p class="error-message">{{ error_message }}</p>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}

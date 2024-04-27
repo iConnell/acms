@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'user_auth'
+    'user_auth',
+    'student',
+    'clearance',
 ]
 
 MIDDLEWARE = [
@@ -121,6 +123,10 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+LOGIN_URL='user_auth:student_login'
+
+LOGOUT_REDIRECT_URL = "index"
 
 AUTH_USER_MODEL = 'user_auth.User'
 

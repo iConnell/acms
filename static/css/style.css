@@ -5,9 +5,9 @@ header {
     overflow: hidden;
     background-color: green;
     color: #ffffff;
-    padding: 1rem 0; /* Top and bottom padding */
+    padding: 0; /* Top and bottom padding reduced */
     margin: 0; /* Remove default margin */
-    width: 100%; 
+    width: 100%;
 }
 
 /* Navigation styles */
@@ -21,6 +21,78 @@ nav a {
     text-decoration: none;
     color: #ffffff;
 }
+
+header ul li.user-info {
+    margin-left: auto; /* This will push the user-info to the far end */
+    display: flex;
+    align-items: center;
+}
+
+header ul li.user-info img {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
+    border-radius: 50%; /* Makes the image round */
+    margin-right: 10px;
+}
+
+/* Logout link styles */
+header ul li a.logout-link {
+    background-color: #f44336; /* Red color for the logout button */
+    color: #ffffff;
+    padding: 5px 10px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+header ul li a.logout-link:hover {
+    background-color: #c0392b; /* Darker red color on hover */
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    height: 100vh;
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    overflow-y: auto;
+    transition: left 0.3s;
+    z-index: 1; /* Lower z-index to avoid covering header/footer */
+}
+
+/* Show the sidebar when user is authenticated */
+.sidebar.active {
+    left: 0;
+}
+
+/* Main content styles */
+.main-content {
+    margin-left: 0; /* Reset margin to remove extra space */
+    padding: 2rem; /* Add padding to main content area */
+}
+/* Sidebar link styles */
+.sidebar ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.sidebar li {
+    padding: 0.5rem 1rem; /* Add padding for each list item */
+}
+
+.sidebar a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Set text color */
+    display: block; /* Make the links fill the list item */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+.sidebar a:hover {
+    background-color: #444; /* Change background color on hover */
+}
+
 
 /* Landing section styles */
 .landing {
@@ -459,4 +531,90 @@ footer {
 
 .password-reset-done-container a.back-to-login:hover {
     text-decoration: underline;
+}
+
+
+/* Perform Clearance */
+
+/* Perform Clearance Container */
+.perform-clearance-content {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px auto;
+}
+
+/* Perform Clearance Header */
+.perform-clearance-content h1 {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.5em;
+}
+
+/* Clearance Item Labels */
+.perform-clearance-content label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Clearance Item Checkboxes */
+.perform-clearance-content input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+/* Submit Button */
+.perform-clearance-content button {
+    background-color: #008f36;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.perform-clearance-content button:hover {
+    background-color: #007a31;
+}
+
+/* Style the message */
+.message {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+/* Static CSS for the clearance form */
+
+/* Style the "Choose File" button */
+.custom-file-input {
+    /* Customize the appearance of the file input button */
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.custom-file-input:hover {
+    background-color: #007a31;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
 }

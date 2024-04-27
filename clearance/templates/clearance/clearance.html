@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Clearance System{% endblock %}
+
+{% block content %}
+    <div class="sidebar">
+        <h2>Clearances</h2>
+        <ul>
+            <li><a href="#">School Fees</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Alumni</a></li>
+            <li><a href="#">Hostel</a></li>
+            <!-- Add more clearance items -->
+        </ul>
+    </div>
+
+    <div class="content">
+        {% block clearance_content %}
+        <!-- Content specific to each clearance will go here -->
+        {% endblock %}
+    </div>
+{% endblock %}

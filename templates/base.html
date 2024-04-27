@@ -15,16 +15,40 @@
             </div>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="#">Clearance</a></li>
-                <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'student:library_clearance' %}">Library</a></li>
+                {% for clearance_item in clearance_items %}
+                    <li><a href="">{{ clearance_item}}</a></li>
+                {% endfor %}
+
+                {% if user.is_authenticated %}
+                    <li class="user-info">
+                        <img src="{{ user.avatar|default:'https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=' }}{{ user.first_name }}+{{ user.last_name }}" alt="Profile Picture">
+                        <span>{{ user.get_full_name }}</span>
+                    </li>
+                    <li><a href="{% url 'user_auth:user_logout' %}" class="logout-link">Logout</a></li>
+                {% endif %}
+
             </ul>
         </nav>
     </header>
 
-    {% block content %}
-    <!-- Content specific to each page will go here -->
-    {% endblock %}
+    <!-- {% if user.is_authenticated %} -->
+    <!-- Show the sidebar only for authenticated users -->
+    <!-- <div class="sidebar {% if user.is_authenticated %}active{% endif %}">
+        <ul>
+            {% for clearance_item in clearance_items %}
+                <li><a href="">{{ clearance_item}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %} -->
+
+    <div class="main-content">
+        {% block content %}
+        <!-- Content specific to each page will go here -->
+        {% endblock %}
+    </div>
 
     <footer>
         <p>© 2024 University of Nigeria. All rights reserved.</p>

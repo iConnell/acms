@@ -1,6 +1,6 @@
 from django.contrib.auth.forms import SetPasswordForm
 from django.contrib.auth.tokens import default_token_generator
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, logout
 from django.utils.http import urlsafe_base64_decode
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, get_user_model
@@ -16,6 +16,10 @@ def index(request):
     """Render the landing page."""
     return render(request, 'index.html')
 
+def logout_view(request):
+    logout(request)
+    return redirect('index')
+
 def student_login(request):
     if request.method == 'POST':
         matric_number = request.POST.get('matric_number')
@@ -28,7 +32,7 @@ def student_login(request):
             if user:
                 login(request, user)
                 # Redirect to dashboard or desired page
-                return redirect('dashboard')
+                return redirect('student:student_dashboard')
             else:
                 # Invalid credentials, show an error message
                 context = {'error_message': 'Invalid matric number or password'}

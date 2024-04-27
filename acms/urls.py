@@ -19,7 +19,8 @@ from django.urls import path, include
 from user_auth.views import index
 
 urlpatterns = [
-    path('', index),
+    path('', index, name='index'),
     path('admin/', admin.site.urls),
-    path('auth/', include('user_auth.urls'))
+    path('auth/', include('user_auth.urls')),
+    path('student/', include('student.urls'))
 ]
